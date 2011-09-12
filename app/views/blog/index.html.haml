@@ -1,25 +1,14 @@
-%h1 Listing articles
 
 .articles
-  %ul
+  %ul.articles
     - @articles.each do |article|
       %li.article
-      
-        %h3.title= article.title
-          
-        .body= article.body.html_safe
-        
-        .meta
-          %ul
-            %li.created_at=  article.created_at
-            %li.updated_at=  article.updated_at
-            %li.author=      article.author_id
+
+        = render article
         
         .actions
           %ul
             %li= link_to 'Show', article
-            %li= link_to 'Edit', edit_article_path(article)
-            %li= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete
 
 
-= link_to 'New Article', new_article_path
+

@@ -2,10 +2,14 @@
 @import blueprint/reset
 @import compass
 
+
 //@import partials/base
 
 +reset-html5
 +blueprint-typography
+
+
+@import base
 
 //-------------------------
 
@@ -14,5 +18,19 @@ body
 
 #pg
   +container
-  background: white
+
+.userbox,
+.meta
+  +float(right)
+    
+
+.meta ul,
+.userbox ul
+  @extend .bordered-inline-list
   
+.actions ul
+  +inline-list  
+
+    
+#bd
+  background: white

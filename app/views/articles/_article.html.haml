@@ -1,0 +1,8 @@
+= render 'articles/meta', :article => article      
+%h3.title= article.title
+
+.body
+  -if controller.controller_name == 'blog'
+    = article.intro
+  - else
+    = article.body

@@ -1,0 +1,13 @@
+.meta
+  %ul
+    %li.created_at
+      created: 
+      = time_ago_in_words(article.created_at)
+      ago
+    %li.updated_at
+      updated:
+      = time_ago_in_words(article.updated_at)
+      ago
+    %li.author
+      written by: 
+      = link_to article.author, article.author

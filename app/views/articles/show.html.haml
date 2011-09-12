@@ -1,21 +1,6 @@
-%p#notice= notice
 
-%p
-  %b Title:
-  = @article.title
-%p
-  %b Body:
-  = @article.body
-%p
-  %b Created at:
-  = @article.created_at
-%p
-  %b Updated at:
-  = @article.updated_at
-%p
-  %b Author:
-  = @article.author_id
+=render @article
 
 = link_to 'Edit', edit_article_path(@article)
 \|
-= link_to 'Back', articles_path
+= link_to 'Back', root_path

@@ -4,20 +4,23 @@
   %head
     %title Distinctions Fines
     =stylesheet_link_tag    "application"
+    =stylesheet_link_tag    controller.controller_name    
     =javascript_include_tag "application"
     =csrf_meta_tags
     
     
   %body
-  
-    #hd
-      =render 'userbox'
-
     #pg
-    
-      .notice=  notice
-      .alert=   alert
+      =render 'userbox'    
+      #hd
+        %h1= link_to 'Distinctions fines', root_path
+
+        
+      #bd
+      
+        .notice=  notice
+        .alert=   alert
 
     
-      = yield
+        = yield
 
