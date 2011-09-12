@@ -56,4 +56,9 @@ end
 # AUTH ————————————————————————————
 
   gem 'devise'
-  gem 'cancan'  
+  gem 'cancan'
+  
+# ADMIN ___________________________
+
+  gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+    

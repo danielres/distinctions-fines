@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/sferik/rails_admin.git
+  revision: 22a7e9b2dc829909d641264bd91fb96252b5fa82
+  specs:
+    rails_admin (0.0.1)
+      builder (~> 3.0.0)
+      haml (>= 3.1.0, < 3.3.0)
+      rails (~> 3.1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -158,6 +167,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   rails (= 3.1.0)
+  rails_admin!
   sass-rails (~> 3.1.0)
   sqlite3
   therubyracer
