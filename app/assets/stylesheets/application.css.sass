@@ -1,8 +1,18 @@
-
+@import blueprint
+@import blueprint/reset
 @import compass
-@import _blueprint
+
+//@import partials/base
+
++reset-html5
++blueprint-typography
+
+//-------------------------
 
 body
-  background: black
-  +linear-gradient(color-stops(white, black))
-  +column(5)
+  background: #ddd
+
+#pg
+  +container
+  background: white
+  
