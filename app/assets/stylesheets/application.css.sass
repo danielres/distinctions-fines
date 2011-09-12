@@ -12,7 +12,20 @@
 @import base
 
 //-------------------------
+.article.draft *    
+  +opacity(0.8)
 
+.article
+  padding: 20px
+  +clearfix  
+  
+.articles
+  border-top: 1px solid  
+  .article
+    border-bottom: 1px solid
+
+
+  
 body
   background: #ddd
 
@@ -28,9 +41,8 @@ body
 .userbox ul
   @extend .bordered-inline-list
   
-.actions ul
-  +inline-list  
-
     
 #bd
   background: white
+  
+  

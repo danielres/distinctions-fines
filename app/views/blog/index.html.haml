@@ -1,14 +1,1 @@
-
-.articles
-  %ul.articles
-    - @articles.each do |article|
-      %li.article
-
-        = render article
-        
-        .actions
-          %ul
-            %li= link_to 'Show', article
-
-
-
+.articles= render @articles
