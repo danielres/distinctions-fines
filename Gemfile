@@ -52,3 +52,8 @@ end
 
   gem 'execjs'
   gem 'therubyracer'
+  
+# AUTH ————————————————————————————
+
+  gem 'devise'
+  gem 'cancan'  
