@@ -1,7 +1,8 @@
 class BlogController < ApplicationController
 
-  def index
-    @articles = Article.all
+
+  def index  
+    @articles = Article.accessible_by(current_ability)
 
     respond_to do |format|
       format.html # index.html.erb
