@@ -6,9 +6,7 @@ class Article < ActiveRecord::Base
 
   validates :status_code, :presence => true
   
-  default_scope :conditions => { :status_code => 1 }
-  
-  #named_scope :published, :conditions => { :status => 'published' }
+  scope :published, :conditions => { :status_code => 1 }
   
 
   
