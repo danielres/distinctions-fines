@@ -15,8 +15,11 @@ class Comment < ActiveRecord::Base
   
   validates :user, :title, :comment, :commentable, :presence => true
   
+  
   def to_s
     comment
   end
+  
+
   
 end
