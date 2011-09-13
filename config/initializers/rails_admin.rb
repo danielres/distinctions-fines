@@ -68,6 +68,14 @@ RailsAdmin.config do |config|
   # config.label_methods << [:description] # Default is [:name, :title]
   
   #  ==> Global models configuration
+  
+  config.models do
+    list do
+      fields_of_type :datetime do
+        date_format :short
+      end
+    end
+  end  
   # config.models do
   #   # Configuration here will affect all included models in all scopes, handle with care!
   #   
