@@ -61,4 +61,8 @@ end
 # ADMIN ___________________________
 
   gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+
+# COMMENTS _________________________
+
+  gem 'acts_as_commentable'
     
