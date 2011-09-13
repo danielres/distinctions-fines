@@ -2,47 +2,45 @@
 @import blueprint/reset
 @import compass
 
-
-//@import partials/base
-
 +reset-html5
 +blueprint-typography
 
-
 @import base
 
-//-------------------------
-.article.draft *    
-  +opacity(0.8)
 
-.article
-  padding: 20px
-  +clearfix  
-  
-.articles
-  border-top: 1px solid  
-  .article
-    border-bottom: 1px solid
-
-
-  
-body
-  background: #ddd
+// STRUCTURE --------------
 
 #pg
   +container
 
+.article
+  +clearfix  
+  padding: 20px
+
 .userbox,
 .meta
   +float(right)
-    
+  ul
+    @extend .bordered-inline-list
 
-.meta ul,
-.userbox ul
-  @extend .bordered-inline-list
-  
+
+// BORDERS ----------------
+
+.article
+  border-top: 1px solid  
+  border-bottom: 1px solid
+  &+.article
+    border-top: 0
     
+    
+// TONES ------------------  
+
+body
+  background: #ddd
 #bd
   background: white
   
+.article
+  &.draft *    
+    +opacity(0.8)  
   
