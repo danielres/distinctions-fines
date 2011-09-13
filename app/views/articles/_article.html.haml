@@ -3,9 +3,12 @@
   %h3.title= article.title
 
   .body
+  
     -if controller.controller_name == 'blog'
       = article.intro
       = link_to 'Read >', article
+      
     - else
       = article.body
-      
+      = link_to '< Back', root_path            
+
