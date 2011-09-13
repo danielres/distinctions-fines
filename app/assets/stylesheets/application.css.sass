@@ -12,11 +12,16 @@
 
 #pg
   +container
+#bd
+  #main
+    +column(18)
+  #aside
+    +column(6, true)
 
+  
 .article
   +clearfix  
   padding: 20px
-
 
 .comments
   margin: 20px 0
@@ -27,12 +32,25 @@
     &+.comment
       border-top: 0
 
-
 .userbox,
 .meta
   ul
     +inline-list
 
+#aside
+  .box
+    background: white
+    padding: 5px 10px
+    margin-bottom: 10px
+    ul
+      +reset-box-model
+    li
+      +no-bullet
+      padding: 5px 0
+      border: 0 dashed
+      border-width: 1px 0
+      &+li
+        border-top-width: 0
 
 // BORDERS ----------------
 
@@ -46,8 +64,8 @@
 // TONES ------------------  
 
 body
-  background: #ddd
-#bd
+  background: #ccc
+#main
   background: white
   
 .article.draft .title:after
