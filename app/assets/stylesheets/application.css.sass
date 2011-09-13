@@ -17,11 +17,21 @@
   +clearfix  
   padding: 20px
 
+
+.comments
+  margin: 20px 0
+  .comment
+    padding: 10px
+    border: 0 dashed
+    border-width: 1px 0
+    &+.comment
+      border-top: 0
+
+
 .userbox,
 .meta
-  +float(right)
   ul
-    @extend .bordered-inline-list
+    +inline-list
 
 
 // BORDERS ----------------
@@ -40,7 +50,11 @@ body
 #bd
   background: white
   
-.article
-  &.draft *    
-    +opacity(0.8)  
+.article.draft .title:after
+  content: "draft"
+  background-color: yellow
+  display: inline-block
+  float:left
+  padding: 5px 10px
+  margin: 10px
   

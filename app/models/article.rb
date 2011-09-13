@@ -1,5 +1,7 @@
 class Article < ActiveRecord::Base
 
+  acts_as_commentable
+
   belongs_to :author, :class_name => 'User'
   
   validates :body, :presence => true
@@ -25,6 +27,14 @@ class Article < ActiveRecord::Base
       'published'
     end
   end
+  
+  def to_s
+    title
+  end
+
+  def to_param 
+    "#{id}-#{to_s.truncate(150).parameterize}"
+  end  
   
   
 end

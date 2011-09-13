@@ -1,10 +1,12 @@
 .meta
   %ul
-    %li.created_at
+    %li.comments-count
+      = link_to article.comments.count.to_s + ' comments', article_path(article, :anchor => "comments")
+    %li.created-at
       created: 
       = time_ago_in_words(article.created_at)
       ago
-    %li.updated_at
+    %li.updated-at
       updated:
       = time_ago_in_words(article.updated_at)
       ago
