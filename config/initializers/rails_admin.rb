@@ -33,7 +33,7 @@ RailsAdmin.config do |config|
   
   #  ==> Authorization
   # Use cancan https://github.com/ryanb/cancan for authorization:
-  # config.authorize_with :cancan
+  config.authorize_with :cancan
   
   # Or use a custom dead-stupid authorization rule:
   # config.authorize_with do
