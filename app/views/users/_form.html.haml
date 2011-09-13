@@ -9,11 +9,10 @@
   .field
     = f.label :display_name
     = f.text_field :display_name
+
   .field
-    = f.label :created_at
-    = f.datetime_select :created_at
-  .field
-    = f.label :updtated_at
-    = f.datetime_select :updtated_at
+    = f.label :password
+    = f.password_field :password
+
   .actions
     = f.submit 'Save'
