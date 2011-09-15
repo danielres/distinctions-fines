@@ -24,20 +24,32 @@ form.edit_user
   
 #hd h1 a
   +unstyled-link
+  padding: 10px
   &:hover
     text-decoration: underline
 #pg
   +container
 #bd
   #main
-    +column(17)
-    padding: $blueprint-grid-width / 2
+    +column(18)
   #aside
     +column(6, true)
-  
+    position: relative
+    left: 20px
+
+.userbox 
+  +clearfix
+  ul
+    +float(right)
+    +reset-box-model
+    +no-bullets
+    text-align: right 
+    
 .article
   @extend .clearfix  
-  padding: 20px
+  padding: 20px 10px
+  .title
+    margin-top: 0
   & + .article
     border-top: 1px dashed gray
 
@@ -75,11 +87,9 @@ form.edit_user
 
 #aside
   .box
-    background: white
     padding: 5px 10px
     margin-bottom: 10px
     border-top: 1px solid  
-    border-bottom: 1px solid    
     ul
       +reset-box-model
     li
@@ -92,16 +102,10 @@ form.edit_user
 
 #main
   border-top: 1px solid  
-  border-bottom: 1px solid
     
     
 // TONES ------------------  
 
-body
-  background: #ccc
-#main
-  background: white
-  
 .article.draft .title:after
   content: "draft"
   background-color: yellow
@@ -144,3 +148,11 @@ body
 .authentication .uid
   color: #666
   font-size: 11px
+  
+// ---------
+
+hr
+  border-style: dashed
+  border-width: 1px 0 0
+  border-color: gray
+  display: none
