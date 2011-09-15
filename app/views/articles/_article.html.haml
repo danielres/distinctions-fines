@@ -1,10 +1,15 @@
 .article{:class => article.status}  
-  = render 'articles/meta', :article => article      
-  %h3.title= article.title
+  = render 'articles/meta', :article => article  
+      
+  %h3.title
+    - if controller.controller_name == 'blog'
+      = link_to article.title, article
+    -else
+      = article.title
 
   .body
   
-    -if controller.controller_name == 'blog'
+    - if controller.controller_name == 'blog'
       = article.intro
       = link_to 'Read >', article
       

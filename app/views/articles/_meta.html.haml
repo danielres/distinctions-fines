@@ -1,7 +1,8 @@
 .meta
   %ul
-    %li.comments-count
-      = link_to article.comments.count.to_s + ' comments', article_path(article, :anchor => "comments")
+    %li.author
+      written by: 
+      = link_to article.author, article.author  
     %li.created-at
       created: 
       = time_ago_in_words(article.created_at)
@@ -10,9 +11,8 @@
       updated:
       = time_ago_in_words(article.updated_at)
       ago
-    %li.author
-      written by: 
-      = link_to article.author, article.author
+    %li.comments-count
+      = link_to article.comments.count.to_s + pluralize(article.comments.count,'comments', 'comment'), article_path(article, :anchor => "comments")
       
     -if can? :update, article
       %li.edit    

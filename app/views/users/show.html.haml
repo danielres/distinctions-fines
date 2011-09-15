@@ -1,5 +1,9 @@
 %p#notice= notice
 
+%h2
+  Public profile: 
+  =@user.display_name
+%hr
 %p
   %b Display name:
   = @user.display_name
@@ -10,9 +14,10 @@
   %b Updtated at:
   = @user.updtated_at
 
+
 -if can? :update, @user
-  = link_to 'Edit', edit_user_path(@user)
-  \|
+  %hr
+    %ul
+      %li= link_to 'Update my details', edit_user_path(@user)
 
 
-= link_to 'Back', users_path

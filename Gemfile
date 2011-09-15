@@ -57,6 +57,8 @@ end
 
   gem 'devise'
   gem 'cancan'
+  gem 'omniauth', '>= 0.3.0.rc3'
+  
   
 # ADMIN ___________________________
 

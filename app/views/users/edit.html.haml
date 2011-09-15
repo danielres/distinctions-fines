@@ -1,7 +1,13 @@
-%h1 Editing user
+%h1 Update my details
+
+%hr
 
 = render 'form'
 
-= link_to 'Show', @user
-\|
-= link_to 'Back', users_path
+%hr 
+
+%ul
+  %li= link_to 'See my profile', @user
+  %li= link_to 'Manage authentication options', authentications_path
+
+

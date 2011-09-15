@@ -1,13 +1,28 @@
 DistinctionsFines::Application.routes.draw do
+
+
+  resources :authentications
+
+  #OMNIAUTH
+
+    match '/signout' => 'sessions#destroy', :as => :signout
+    match '/signin' => 'sessions#new', :as => :signin
+    match '/users/auth/:provider/callback' => 'authentications#create'          
+    match '/auth/failure' => 'sessions#failure'
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "authentications"}
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  devise_for :users
 
   resources :users
 
   resources :articles
   
   resources :comments  
+  
+    #resources :users, :only => [ :show, :edit, :update ]
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
