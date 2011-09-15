@@ -54,7 +54,7 @@ class AuthenticationsController < ApplicationController
       sign_in(:user, authentication.user)
 
     else
-      u = User.create(:display_name => 'deleteme', :email => 'deleteme@temp.com', :password => 'password')
+      u = User.create(:display_name => auth['user_info']['name'], :email => auth['user_info']['email'], :password => random_pronouncable_password)
       authentication.user = u
       authentication.save
       sign_in(:user, authentication.user)
