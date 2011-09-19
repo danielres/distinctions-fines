@@ -31,9 +31,8 @@ form
 .userbox 
   +clearfix
   ul
+    +reset-list
     +float(right)
-    +reset-box-model
-    +no-bullets
     text-align: right 
     
 .article
@@ -41,16 +40,15 @@ form
   padding: 20px 10px
   .title
     margin-top: 0
-  & + .article
-    border-top: 1px dashed gray
+
 
 .meta
   ul
-    +reset-box-model
-    +no-bullets
+    +reset-list
+    +column(4, true)
     +float(right)
-    margin-left:   $blueprint-grid-width
-    margin-bottom: $blueprint-grid-width
+    margin-left:   span(1)
+    margin-bottom: span(1)
 
 .comments
   margin: 20px 0
@@ -64,14 +62,11 @@ form
 #aside .box
   padding: 5px 10px
   margin-bottom: 10px
-  border-top: 1px solid  
   ul
-    +reset-box-model
+    +reset-list
   li
-    +no-bullet
     padding: 5px 0
-    border: 0 dashed gray
-    border-top-width: 1px
+
       
 //TONES _________________________________________  
   
@@ -93,6 +88,11 @@ form
 
 // BORDERS ______________________________________
 
-#main
-  border-top: 1px solid  
- 
+#main, 
+#aside .box
+  border-top: 1px solid
+
+.article + .article,  
+#aside .box li,
+  border-top: 1px dashed gray
+
