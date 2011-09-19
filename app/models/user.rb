@@ -23,6 +23,10 @@ class User < ActiveRecord::Base
     display_name
   end
   
-
+  def has_role?(role)
+    if role == :admin
+      true if id == 2
+    end
+  end
   
 end
