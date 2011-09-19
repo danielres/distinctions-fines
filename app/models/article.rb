@@ -8,6 +8,8 @@ class Article < ActiveRecord::Base
 
   validates :status_code, :presence => true
   
+  default_scope :order => "created_at DESC"
+  
   scope :published, :conditions => { :status_code => 1 }
   
 
