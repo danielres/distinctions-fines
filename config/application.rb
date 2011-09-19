@@ -11,6 +11,8 @@ end
 
 module DistinctionsFines
   class Application < Rails::Application
+    FACEBOOK_KEY    = ENV['OAUTH_FACEBOOK_CONSUMER_KEY']
+    FACEBOOK_SECRET = ENV['OAUTH_FACEBOOK_CONSUMER_SECRET']
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
