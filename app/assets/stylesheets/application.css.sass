@@ -1,42 +1,33 @@
-@import blueprint
-@import blueprint/reset
-@import compass
-
-+reset-html5
-+blueprint-typography
-
 @import base
 
-.clearfix
-  +clearfix
-    
-// STRUCTURE --------------
+// PAGE STRUCTURE _______________________________
 
-form#user_new,
-form#new_comment,
-form.edit_user
+#pg
+  +container
+  padding-top: 20px
+  
+#bd
+  #main
+    +column(18)
+  #aside
+    +column(6)
+    +last
+    +push(0.5)
+
+// GENERIC ELEMENTS _____________________________
+
+// FORMS ----------
+
+form
   .field
     +clearfix
     label
       +column(4)
   .actions
-    padding-left: 160px
-  
-#hd h1 a
-  +unstyled-link
-  padding: 10px
-  &:hover
-    text-decoration: underline
-#pg
-  +container
-#bd
-  #main
-    +column(18)
-  #aside
-    +column(6, true)
-    position: relative
-    left: 20px
+    +prepend(4)
 
+// COMPONENTS -----
+  
 .userbox 
   +clearfix
   ul
@@ -60,9 +51,6 @@ form.edit_user
     +float(right)
     margin-left:   $blueprint-grid-width
     margin-bottom: $blueprint-grid-width
-    
-
-    
 
 .comments
   margin: 20px 0
@@ -73,38 +61,28 @@ form.edit_user
     &+.comment
       border-top: 0
 
-.providers
-  ul
-    +reset-box-model  
-    @extend .clearfix
-  li
-    +column(2.5)
-    +push(4)
-    img
-      position: relative
-      left: -10px
-
-
-#aside
-  .box
-    padding: 5px 10px
-    margin-bottom: 10px
-    border-top: 1px solid  
-    ul
-      +reset-box-model
-    li
-      +no-bullet
-      padding: 5px 0
-      border: 0 dashed gray
-      border-top-width: 1px
-
-// BORDERS ----------------
-
-#main
+#aside .box
+  padding: 5px 10px
+  margin-bottom: 10px
   border-top: 1px solid  
-    
-    
-// TONES ------------------  
+  ul
+    +reset-box-model
+  li
+    +no-bullet
+    padding: 5px 0
+    border: 0 dashed gray
+    border-top-width: 1px
+      
+//TONES _________________________________________  
+  
+#pg
+  background: url("mire.png") no-repeat  
+   
+#hd h1 a
+  +unstyled-link
+  padding: 10px
+  &:hover
+    text-decoration: underline
 
 .article.draft .title:after
   content: "draft"
@@ -112,47 +90,9 @@ form.edit_user
   display: inline-block
   float:left
   margin: 0 10px
-  
-  
-//------------------
 
-.authentications
-  +clearfix
+// BORDERS ______________________________________
 
-.authentication
-  width: 130px
-  float: left
-  background-color: #EEE
-  border: solid 1px #999
-  padding: 5px 10px
-  -moz-border-radius: 8px
-  -webkit-border-radius: 8px
-  position: relative
-  margin-right: 10px
-
-.authentication .remove
-  text-decoration: none
-  position: absolute
-  top: 3px
-  right: 3px
-  color: #333
-  padding: 2px 4px
-  font-size: 10px
-
-.authentication .remove:hover 
-  color: #CCC
-  background-color: #777
-  -moz-border-radius: 6px
-  -webkit-border-radius: 6px
-
-.authentication .uid
-  color: #666
-  font-size: 11px
-  
-// ---------
-
-hr
-  border-style: dashed
-  border-width: 1px 0 0
-  border-color: gray
-  display: none
+#main
+  border-top: 1px solid  
+ 
